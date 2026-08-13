@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Currículo online de Diego Santos - Tecnologia da Informação">
+
+<title>Diego Santos | Tecnologia da Informação</title>
+
+<!-- Fonte -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+
+<style>
+
+/* =====================================================
+   CONFIGURAÇÕES
+===================================================== */
+
+:root{
+
+    --bg:#f5f7fa;
+    --card:#ffffff;
+
+    --dark:#06101e;
+    --dark2:#0b1929;
+
+    --text:#172033;
+    --muted:#667085;
+
+    --primary:#00d4ff;
+    --primary2:#0066ff;
+
+    --border:#e5e7eb;
+
+    --radius:18px;
+
+    --shadow:
+    0 20px 50px rgba(0,0,0,.08);
+
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    line-height:1.7;
+
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+ul{
+    list-style:none;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    z-index:9999;
+
+    background:rgba(6,16,30,.92);
+
+    backdrop-filter:blur(15px);
+
+    border-bottom:
+    1px solid rgba(255,255,255,.08);
+
+}
+
+.navbar{
+
+    max-width:1200px;
+
+    height:75px;
+
+    margin:auto;
+
+    padding:0 25px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+.logo{
+
+    font-size:22px;
+
+    font-weight:800;
+
+    color:white;
+
+}
+
+.logo span{
+    color:var(--primary);
+}
+
+.nav-links{
+
+    display:flex;
+
+    gap:28px;
+
+}
+
+.nav-links a{
+
+    color:#c8d2df;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover{
+    color:var(--primary);
+}
+
+.menu-button{
+
+    display:none;
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    font-size:26px;
+
+    cursor:pointer;
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    color:white;
+
+    background:
+
+    radial-gradient(
+        circle at 80% 20%,
+        rgba(0,212,255,.16),
+        transparent 35%
+    ),
+
+    linear-gradient(
+        135deg,
+        #020817,
+        #0b1728
+    );
+
+}
+
+.hero:before{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    right:-150px;
+    top:100px;
+
+    border:
+
+    1px solid
+    rgba(0,212,255,.12);
+
+    border-radius:50%;
+
+}
+
+.hero:after{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+    height:300px;
+
+    right:120px;
+    bottom:-100px;
+
+    border:
+
+    1px solid
+    rgba(0,102,255,.15);
+
+    border-radius:50%;
+
+}
+
+.hero-content{
+
+    max-width:1200px;
+
+    width:100%;
+
+    margin:auto;
+
+    padding:120px 25px 70px;
+
+    display:grid;
+
+    grid-template-columns:260px 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+/* FOTO */
+
+.avatar{
+
+    width:220px;
+    height:220px;
+
+    border-radius:50%;
+
+    border:4px solid var(--primary);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:55px;
+
+    font-weight:800;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #0c253c,
+        #0066ff
+    );
+
+    box-shadow:
+
+    0 0 0 15px
+    rgba(0,212,255,.04),
+
+    0 0 70px
+    rgba(0,212,255,.25);
+
+}
+
+
+/* TEXTO */
+
+.small-title{
+
+    color:var(--primary);
+
+    font-size:12px;
+
+    font-weight:800;
+
+    letter-spacing:4px;
+
+    margin-bottom:15px;
+
+}
+
+.hero h1{
+
+    font-size:
+    clamp(50px,7vw,85px);
+
+    line-height:1.05;
+
+    margin-bottom:20px;
+
+}
+
+.hero h1 span{
+    color:var(--primary);
+}
+
+.hero h2{
+
+    font-size:21px;
+
+    color:#c8d1dd;
+
+    font-weight:500;
+
+    margin-bottom:25px;
+
+}
+
+.hero-description{
+
+    max-width:650px;
+
+    color:#aab6c6;
+
+    margin-bottom:35px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+.btn{
+
+    padding:13px 25px;
+
+    border-radius:8px;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.btn-primary{
+
+    background:var(--primary);
+
+    color:#03101b;
+
+}
+
+.btn-secondary{
+
+    border:1px solid #44536a;
+
+    color:white;
+
+}
+
+
+/* =====================================================
+   SEÇÕES
+===================================================== */
+
+.section{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:100px 25px;
+
+}
+
+.dark-section{
+
+    max-width:none;
+
+    background:var(--dark);
+
+    color:white;
+
+    padding-left:
+    max(25px,calc((100% - 1150px)/2));
+
+    padding-right:
+    max(25px,calc((100% - 1150px)/2));
+
+}
+
+.section-title{
+
+    display:flex;
+
+    gap:20px;
+
+    align-items:flex-start;
+
+    margin-bottom:60px;
+
+}
+
+.section-number{
+
+    color:var(--primary);
+
+    font-size:14px;
+
+    font-weight:800;
+
+}
+
+.section-title p{
+
+    color:var(--primary);
+
+    font-size:11px;
+
+    letter-spacing:3px;
+
+    font-weight:800;
+
+}
+
+.section-title h2{
+
+    font-size:40px;
+
+    line-height:1.2;
+
+}
+
+
+/* =====================================================
+   SOBRE
+===================================================== */
+
+.about-grid{
+
+    display:grid;
+
+    grid-template-columns:1.4fr 1fr;
+
+    gap:70px;
+
+}
+
+.about-text p{
+
+    color:var(--muted);
+
+    margin-bottom:22px;
+
+}
+
+.about-cards{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:15px;
+
+}
+
+.info-card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    padding:30px;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+}
+
+.info-card strong{
+
+    display:block;
+
+    color:var(--primary2);
+
+    font-size:30px;
+
+}
+
+.info-card span{
+
+    color:var(--muted);
+
+    font-size:12px;
+
+}
+
+
+/* =====================================================
+   HABILIDADES
+===================================================== */
+
+.skills-container{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:50px;
+
+}
+
+.skill-category h3{
+
+    font-size:20px;
+
+    margin-bottom:20px;
+
+}
+
+.skill-category h3 span{
+
+    color:var(--primary);
+
+    font-size:12px;
+
+    margin-right:10px;
+
+}
+
+.skills{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+}
+
+.skills span{
+
+    padding:9px 15px;
+
+    border:1px solid #29394f;
+
+    border-radius:30px;
+
+    color:#bac5d3;
+
+    font-size:12px;
+
+    transition:.3s;
+
+}
+
+.skills span:hover{
+
+    color:var(--primary);
+
+    border-color:var(--primary);
+
+    transform:translateY(-2px);
+
+}
+
+
+/* =====================================================
+   EXPERIÊNCIA
+===================================================== */
+
+.timeline{
+
+    max-width:1000px;
+
+    position:relative;
+
+}
+
+.timeline:before{
+
+    content:"";
+
+    position:absolute;
+
+    left:135px;
+
+    top:0;
+
+    bottom:0;
+
+    width:1px;
+
+    background:var(--border);
+
+}
+
+.timeline-item{
+
+    display:grid;
+
+    grid-template-columns:180px 1fr;
+
+    gap:40px;
+
+    margin-bottom:65px;
+
+    position:relative;
+
+}
+
+.timeline-date{
+
+    color:var(--primary2);
+
+    font-weight:800;
+
+    font-size:13px;
+
+}
+
+.timeline-content{
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    padding:35px;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    position:relative;
+
+}
+
+.timeline-content:before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-46px;
+
+    top:15px;
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    box-shadow:
+    0 0 0 5px var(--bg);
+
+}
+
+.company{
+
+    color:var(--primary2);
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+}
+
+.timeline-content h3{
+
+    font-size:23px;
+
+    margin:8px 0 15px;
+
+}
+
+.timeline-content p{
+
+    color:var(--muted);
+
+    margin-bottom:20px;
+
+}
+
+.timeline-content li{
+
+    position:relative;
+
+    padding-left:18px;
+
+    margin-bottom:8px;
+
+    color:#5f6b7b;
+
+    font-size:13px;
+
+}
+
+.timeline-content li:before{
+
+    content:"→";
+
+    position:absolute;
+
+    left:0;
+
+    color:var(--primary2);
+
+}
+
+
+/* =====================================================
+   FORMAÇÃO
+===================================================== */
+
+.education-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:25px;
+
+}
+
+.education-card{
+
+    border:1px solid #25364b;
+
+    padding:40px;
+
+    border-radius:var(--radius);
+
+    background:#0b1929;
+
+    transition:.3s;
+
+}
+
+.education-card:hover{
+
+    transform:translateY(-5px);
+
+    border-color:var(--primary);
+
+}
+
+.education-icon{
+
+    font-size:35px;
+
+    margin-bottom:20px;
+
+}
+
+.education-card span{
+
+    color:var(--primary);
+
+    font-size:12px;
+
+    font-weight:800;
+
+}
+
+.education-card h3{
+
+    font-size:23px;
+
+    margin:10px 0;
+
+}
+
+.education-card p{
+    color:#b8c3d1;
+}
+
+.education-card small{
+    color:#738095;
+}
+
+
+/* =====================================================
+   CERTIFICAÇÕES
+===================================================== */
+
+.certifications{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:15px;
+
+}
+
+.certificate{
+
+    padding:20px;
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    display:flex;
+
+    gap:15px;
+
+    align-items:center;
+
+}
+
+.certificate span{
+
+    color:var(--primary2);
+
+    font-weight:800;
+
+}
+
+
+/* =====================================================
+   CONTATO
+===================================================== */
+
+.contact-section{
+
+    background:
+
+    radial-gradient(
+        circle at center,
+        rgba(0,212,255,.12),
+        transparent 50%
+    ),
+
+    #06101e;
+
+    color:white;
+
+    text-align:center;
+
+    padding:110px 25px;
+
+}
+
+.contact-content{
+
+    max-width:800px;
+
+    margin:auto;
+
+}
+
+.contact-section h2{
+
+    font-size:
+    clamp(40px,6vw,65px);
+
+    line-height:1.1;
+
+    margin-bottom:25px;
+
+}
+
+.contact-section h2 span{
+
+    color:var(--primary);
+
+}
+
+.contact-description{
+
+    color:#aab6c6;
+
+    margin-bottom:35px;
+
+}
+
+.contact-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+}
+
+.contact-button{
+
+    min-width:210px;
+
+    padding:15px 20px;
+
+    border:1px solid #29394f;
+
+    border-radius:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    text-align:left;
+
+    transition:.3s;
+
+}
+
+.contact-button:hover{
+
+    border-color:var(--primary);
+
+    transform:translateY(-3px);
+
+}
+
+.contact-button .contact-text{
+
+    display:flex;
+
+    flex-direction:column;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+.contact-button small{
+
+    color:#8290a3;
+
+    font-weight:400;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+<footer>
+
+<div class="footer">
+
+
+<div class="logo">
+<span>&lt;</span>DS<span>/&gt;</span>
+</div>
+
+
+<p>
+
+© <span id="ano"></span>
+Diego Santos.
+
+</p>
+
+
+<p class="footer-tech">
+
+HTML • CSS • JavaScript
+
+</p>
+
+
+</div>
+
+</footer>
+
+
+<!-- =====================================================
+   JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* ==========================
+   MENU MOBILE
+========================== */
+
+const menuButton =
+document.getElementById("menuButton");
+
+const navLinks =
+document.getElementById("navLinks");
+
+
+menuButton.addEventListener(
+"click",
+function(){
+
+navLinks.classList.toggle("active");
+
+});
+
+
+/* ==========================
+   FECHAR MENU
+========================== */
+
+document
+.querySelectorAll(".nav-links a")
+.forEach(function(link){
+
+link.addEventListener(
+"click",
+function(){
+
+navLinks.classList.remove("active");
+
+});
+
+});
+
+
+/* ==========================
+   ANO AUTOMÁTICO
+========================== */
+
+document.getElementById("ano")
+.textContent =
+new Date().getFullYear();
+
+
+/* ==========================
+   ANIMAÇÃO
+========================== */
+
+const observer =
+new IntersectionObserver(
+
+function(entries){
+
+entries.forEach(
+function(entry){
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("active");
+
+}
+
+});
+
+},
+
+{
+threshold:.15
+}
+
+);
+
+
+document
+.querySelectorAll(".reveal")
+.forEach(function(element){
+
+observer.observe(element);
+
+});
+
+
+</script>
+
+
+</body>
+
+</html>
